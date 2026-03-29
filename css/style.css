@@ -1,0 +1,37 @@
+/* Custom Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero {
+    /* Imagen real de la cabaña obtenida de loscedros.ar */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../img/hero.webp') no-repeat center center/cover;
+    height: 80vh;
+    background-attachment: fixed;
+}
+
+.btn-primary {
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+
+.btn-primary:hover {
+    background-color: #d35400;
+    border-color: #d35400;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
