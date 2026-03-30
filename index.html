@@ -43,7 +43,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'; this.onload = null;">
     <!-- Custom CSS (Inlined for Performance) -->
     <style>
-        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:#333}.navbar{box-shadow:0 2px 4px rgba(0,0,0,.1)}.hero{background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url('img/hero.webp') no-repeat center center/cover;height:80vh;background-attachment:fixed}.btn-primary{background-color:#e67e22;border-color:#e67e22}.btn-primary:hover{background-color:#d35400;border-color:#d35400}.card{border:none;box-shadow:0 4px 6px rgba(0,0,0,.1);transition:transform .3s}.card:hover{transform:translateY(-5px)}.carousel-item img{height:400px;object-fit:cover;width:100%} /* Agregamos más CSS crítico aquí si es necesario */
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:#333}.navbar{box-shadow:0 2px 4px rgba(0,0,0,.1)}.hero{background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url('img/hero.webp') no-repeat center center/cover;height:80vh;background-attachment:fixed}.btn-primary{background-color:#e67e22;border-color:#e67e22}.btn-primary:hover{background-color:#d35400;border-color:#d35400}.card{border:none;box-shadow:0 4px 6px rgba(0,0,0,.1);transition:transform .3s}        .card:hover{transform:translateY(-5px)}.carousel-item img{height:400px;object-fit:cover;width:100%}
+        .gallery-img { height: 250px; object-fit: cover; width: 100%; transition: transform 0.3s; cursor: pointer; border-radius: 8px; }
+        .gallery-img:hover { transform: scale(1.05); }
+ /* Agregamos más CSS crítico aquí si es necesario */
         /* Estilos críticos para elementos above-the-fold de Bootstrap */
         .container{--bs-gutter-x:1.5rem;--bs-gutter-y:0;width:100%;padding-right:calc(var(--bs-gutter-x)*.5);padding-left:calc(var(--bs-gutter-x)*.5);margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}@media (min-width:1400px){.container{max-width:1320px}}
         .navbar-brand{padding-top:.3125rem;padding-bottom:.3125rem;margin-right:1rem;font-size:1.25rem;text-decoration:none;white-space:nowrap}
@@ -94,43 +97,53 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h2 class="mb-4">Sobre nuestras cabañas</h2>
-                    <p>Ubicadas en la hermosa localidad de Rama Caída, en San Rafael, Mendoza, nuestras cabañas ofrecen el equilibrio perfecto entre confort y aventura. Rodeadas de paisajes imponentes y viñedos, es el lugar ideal para desconectarse.</p>
+                    <h2 class="mb-4">Tu lugar en San Rafael</h2>
+                    <p class="lead">Ubicadas en la hermosa localidad de Rama Caída, nuestras cabañas ofrecen el equilibrio perfecto entre confort y naturaleza.</p>
+                    <p>Estamos rodeados de viñedos y paisajes imponentes, a minutos de las principales atracciones turísticas como el Cañón del Atuel y Valle Grande. Es el lugar ideal para familias que buscan descanso y seguridad.</p>
                 </div>
                 <div class="col-md-6">
-                    <div id="cabanasCarousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-item active">
-                                <img src="img/optimized/cabana1.webp" class="d-block w-100" alt="Vista exterior de cabaña" loading="lazy" width="800" height="600">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/optimized/cabana2.webp" class="d-block w-100" alt="Vista del parque" loading="lazy" width="800" height="600">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/optimized/cabana3.webp" class="d-block w-100" alt="Vista de la piscina" loading="lazy" width="800" height="600">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/optimized/469609952_629391209653019_3380238555158145285_n.webp" class="d-block w-100" alt="Vista de la cabaña 4" loading="lazy" width="800" height="600">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/optimized/469616412_629390879653052_3363553399246150643_n.webp" class="d-block w-100" alt="Vista de la cabaña 5" loading="lazy" width="800" height="600">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/optimized/469873135_629390789653061_3614218325679989521_n.webp" class="d-block w-100" alt="Vista de la cabaña 6" loading="lazy" width="800" height="600">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#cabanasCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Anterior</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#cabanasCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Siguiente</span>
-                        </button>
-                    </div>
+                    <img src="img/optimized/cabana1.webp" class="img-fluid rounded shadow" alt="Vista exterior de Cabañas Los Cedros" loading="lazy" width="800" height="600">
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="galeria" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-5">Galería de Fotos</h2>
+            <div class="row g-3">
+                <div class="col-6 col-md-4">
+                    <img src="img/optimized/cabana2.webp" class="gallery-img shadow-sm" alt="Vista del parque" loading="lazy">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="img/optimized/cabana3.webp" class="gallery-img shadow-sm" alt="Piscina exterior" loading="lazy">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="img/optimized/469609952_629391209653019_3380238555158145285_n.webp" class="gallery-img shadow-sm" alt="Interior cabaña" loading="lazy">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="img/optimized/469616412_629390879653052_3363553399246150643_n.webp" class="gallery-img shadow-sm" alt="Detalle alojamiento" loading="lazy">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="img/optimized/469873135_629390789653061_3614218325679989521_n.webp" class="gallery-img shadow-sm" alt="Entorno natural" loading="lazy">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="img/optimized/469922652_629391206319686_3849563215373454304_n.webp" class="gallery-img shadow-sm" alt="Comodidades" loading="lazy">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="img/optimized/470156191_629391202986353_5646049919704393191_n.webp" class="gallery-img shadow-sm" alt="Galería exterior" loading="lazy">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="img/optimized/486084079_705356352056504_1213058608738902924_n.webp" class="gallery-img shadow-sm" alt="Atardecer en la cabaña" loading="lazy">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="img/optimized/486156813_705356375389835_6399904019408683073_n.webp" class="gallery-img shadow-sm" alt="Servicios adicionales" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Services Section -->
     <section id="servicios" class="py-5 bg-light">
